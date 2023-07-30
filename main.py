@@ -69,7 +69,11 @@ def receive_message(bot_number, weather_api_key):
                 else:
                     send_message(bot_number, f"Sorry I can't find the weather for {location}", message_frame.sender_number, message_frame.group_id)
 
-            elif message_frame.message[0:7] == "!quote ": 
+            elif message_frame.message[0:6] == "!quote": 
+                if message_frame.message == "!quote":
+                    send_message(bot_number, f"Please specify a quote", message_frame.sender_number, message_frame.group_id)
+                    continue
+
                 new_quote = message_frame.message.split("!quote ")[1]
                 subprocess.run(f"git -C quotes/ pull", shell=True,capture_output=True)
                 subprocess.run(f"echo ' ' >> quotes/quotes.tex", shell=True,capture_output=True)
