@@ -3,6 +3,8 @@ import json
 import datetime 
 import requests
 
+PUSH_TO_GIT = False
+
 class message_frame: 
     def __init__(self, sender, sender_number, message, group_id, msg_type):
         self.sender = sender
@@ -29,7 +31,7 @@ def create_message_frame(lines):
         
 
 def send_message(bot_number, message, recipient, group_id):
-    if group_id:
+    if group_id: # Checks if it should send message to group or individual
         subprocess.run(['/home/sam/signal-cli-0.11.11/bin/signal-cli', '-a', bot_number, 'send', '-m', message, '-g', group_id], capture_output=True)
 
     else:
@@ -76,11 +78,15 @@ def receive_message(bot_number, weather_api_key):
 
                 new_quote = message_frame.message.split("!quote ")[1]
                 subprocess.run(f"git -C quotes/ pull", shell=True,capture_output=True)
-                subprocess.run(f"echo ' ' >> quotes/quotes.tex", shell=True,capture_output=True)
-                subprocess.run(f"echo {new_quote} >> quotes/quotes.tex", shell=True,capture_output=True)
-                subprocess.run(f"git -C quotes/ add .", shell=True,capture_output=True)
-                subprocess.run(f"git -C quotes/ commit -m 'New quote added from bot'", shell=True,capture_output=True)
-                subprocess.run(f"git -C quotes/ push", shell=True,capture_output=True)
+                subprocess.run(f"sed '$i ‎' quotes/quotes.tex | tee quotes/quotes_temp.tex", shell=True,capture_output=True)
+                subprocess.run(f"mv quotes/quotes_temp.tex quotes/quotes.tex", shell=True, capture_output=True)
+                subprocess.run(f"sed '$i {new_quote}' quotes/quotes.tex | tee quotes/quotes_temp.tex", shell=True)
+                subprocess.run(f"mv quotes/quotes_temp.tex quotes/quotes.tex", shell=True)
+
+                if PUSH_TO_GIT:
+                    subprocess.run(f"git -C quotes/ add .", shell=True,capture_output=True)
+                    subprocess.run(f"git -C quotes/ commit -m 'New quote added from bot'", shell=True,capture_output=True)
+                    subprocess.run(f"git -C quotes/ push", shell=True,capture_output=True)
                 send_message(bot_number, f"Quote added!", message_frame.sender_number, message_frame.group_id)
 
 
