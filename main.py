@@ -2,32 +2,10 @@ import subprocess
 import json
 import datetime 
 import requests
+from message_frame import create_message_frame
 
 PUSH_TO_GIT = False
 
-class message_frame: 
-    def __init__(self, sender, sender_number, message, group_id, msg_type):
-        self.sender = sender
-        self.sender_number = sender_number
-        self.message = message
-        self.group_id = group_id
-        self.msg_type = msg_type
-
-    
-def create_message_frame(lines):
-    sender, sender_number, message, group_id = ['']*4
-    msg_type = "other"
-    for line in lines: 
-        if line[0:14] == "Envelope from:":
-            sender = line.split(" ")[2]
-            sender_number = line.split(" ")[3]
-        if line[0:5] == "Body:":
-            message = line.strip("Body: ")
-            msg_type = "received_message"
-        if line[0:5] == "  Id:":
-            group_id = line.split(":")[1].strip(" ")
-
-    return message_frame(sender, sender_number, message, group_id, msg_type)
         
 
 def send_message(bot_number, message, recipient, group_id):
@@ -70,6 +48,23 @@ def receive_message(bot_number, weather_api_key):
 
                 else:
                     send_message(bot_number, f"Sorry I can't find the weather for {location}", message_frame.sender_number, message_frame.group_id)
+
+
+            elif message_frame.message[0:15] == "!todaysweather": 
+                if message_frame.message == "!todaysweather": # Sets a default location if no location is specified
+                    message_frame.message = "!todaysweather Gothenburg"
+
+                location = message_frame.message.split(" ")[1]
+                weather_response = requests.get(f"http://api.weatherapi.com/v1/forecast.json?key={weather_api_key}&q={location}")
+                if weather_response.status_code == 200:
+                    x = weather_response.json()
+                    with open('weather.json', 'w') as outfile:
+                        json.dump(x, outfile, indent=4)
+                #     current_temp = weather_response.json()['current']['temp_c']
+                #     send_message(bot_number, f"Current temp in {location}: {current_temp}", message_frame.sender_number,message_frame.group_id)
+
+                # else:
+                #     send_message(bot_number, f"Sorry I can't find the weather for {location}", message_frame.sender_number, message_frame.group_id)
 
             elif message_frame.message[0:6] == "!quote": 
                 if message_frame.message == "!quote":
