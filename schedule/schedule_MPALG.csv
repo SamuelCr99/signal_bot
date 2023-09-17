@@ -1,0 +1,44 @@
+Begin date,Begin time,End date,End time,Exam,Coursekod,Course name,Room,House,Aktivitet,User text,Reservation comment,Teacher,Class,Group,Group,Spärraktivitet,Antal datorer 
+2023-09-18,10:00,2023-09-18,11:45,,"DIT093GU,TIN093","Algorithms,Algorithms",HB1,Hörsalslängan,Lecture,,,,"MPALG-1,MPCAS-2",,,,0
+2023-09-19,13:15,2023-09-19,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-09-19,15:15,2023-09-19,17:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Exercise,,,,"MPALG-1,MPCSN-2",,,,0
+2023-09-20,10:00,2023-09-20,11:45,,"DIT093GU,TIN093","Algorithms,Algorithms",SB-H2,SB2,Lecture,,,,"MPALG-1,MPCAS-2",,,,0
+2023-09-20,13:15,2023-09-20,15:00,,"DIT093GU,TIN093","Algorithms,Algorithms","EB,EC","ED-blocket,ED-blocket",Exercise,,,,"MPALG-1,MPCAS-2",,,,"0,0"
+2023-09-20,15:15,2023-09-20,17:00,,"DIT093GU,TIN093","Algorithms,Algorithms",EC,ED-blocket,Exercise,,,,"MPALG-1,MPCAS-2",,,,0
+2023-09-21,12:00,2023-09-21,13:00,Omtentamensanmälan,,,,,,,,,,,,,
+2023-09-21,13:15,2023-09-21,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-09-21,15:15,2023-09-21,17:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-09-22,13:15,2023-09-22,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB2,Hörsalslängan,Exercise,,,,"MPALG-1,MPCSN-2",,,,0
+2023-09-25,10:00,2023-09-25,11:45,,"DIT093GU,TIN093","Algorithms,Algorithms",SB-H2,SB2,Lecture,,,,"MPALG-1,MPCAS-2",,,,0
+2023-09-26,13:15,2023-09-26,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-09-26,15:15,2023-09-26,17:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Exercise,,,,"MPALG-1,MPCSN-2",,,,0
+2023-09-27,10:00,2023-09-27,11:45,,"DIT093GU,TIN093","Algorithms,Algorithms",SB-H2,SB2,Lecture,,,,"MPALG-1,MPCAS-2",,,,0
+2023-09-27,13:15,2023-09-27,15:00,,"DIT093GU,TIN093","Algorithms,Algorithms","EB,EC","ED-blocket,ED-blocket",Exercise,,,,"MPALG-1,MPCAS-2",,,,"0,0"
+2023-09-27,15:15,2023-09-27,17:00,,"DIT093GU,TIN093","Algorithms,Algorithms",EC,ED-blocket,Exercise,,,,"MPALG-1,MPCAS-2",,,,0
+2023-09-28,13:15,2023-09-28,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",FB,Fysik-Huset,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-09-29,13:15,2023-09-29,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB2,Hörsalslängan,Exercise,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-02,10:00,2023-10-02,11:45,,"DIT093GU,TIN093","Algorithms,Algorithms",SB-H8,SB2,Lecture,,,,"MPALG-1,MPCAS-2",,,,0
+2023-10-03,13:15,2023-10-03,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-03,15:15,2023-10-03,17:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Exercise,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-04,10:00,2023-10-04,11:45,,"DIT093GU,TIN093","Algorithms,Algorithms",SB-H2,SB2,Lecture,,,,"MPALG-1,MPCAS-2",,,,0
+2023-10-04,13:15,2023-10-04,15:00,,"DIT093GU,TIN093","Algorithms,Algorithms","EB,EC","ED-blocket,ED-blocket",Exercise,,,,"MPALG-1,MPCAS-2",,,,"0,0"
+2023-10-04,15:15,2023-10-04,17:00,,"DIT093GU,TIN093","Algorithms,Algorithms",EC,ED-blocket,Exercise,,,,"MPALG-1,MPCAS-2",,,,0
+2023-10-05,13:15,2023-10-05,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-05,15:15,2023-10-05,17:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Exercise,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-06,08:00,2023-10-06,18:00,Omtenta LP4/Re-exam SP4,,,,,,,,,,,,,
+2023-10-07,08:00,2023-10-07,18:00,Omtenta LP4/Re-exam SP4,,,,,,,,,,,,,
+2023-10-09,08:00,2023-10-09,09:45,,"DIT093GU,TIN093","Algorithms,Algorithms",SB-H2,SB2,Lecture,,,,"MPALG-1,MPCAS-2",,,,0
+2023-10-10,13:15,2023-10-10,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",FB,Fysik-Huset,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-10,15:15,2023-10-10,17:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",FB,Fysik-Huset,Exercise,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-11,10:00,2023-10-11,11:45,,"DIT093GU,TIN093","Algorithms,Algorithms",SB-H2,SB2,Lecture,,,,"MPALG-1,MPCAS-2",,,,0
+2023-10-11,13:15,2023-10-11,15:00,,"DIT093GU,TIN093","Algorithms,Algorithms","EB,EC","ED-blocket,ED-blocket",Exercise,,,,"MPALG-1,MPCAS-2",,,,"0,0"
+2023-10-11,15:15,2023-10-11,17:00,,"DIT093GU,TIN093","Algorithms,Algorithms",EC,ED-blocket,Exercise,,,,"MPALG-1,MPCAS-2",,,,0
+2023-10-12,13:15,2023-10-12,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",FB,Fysik-Huset,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-13,13:15,2023-10-13,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB2,Hörsalslängan,Exercise,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-16,10:00,2023-10-16,11:45,,"DIT093GU,TIN093","Algorithms,Algorithms",HB3,Hörsalslängan,Lecture,,,,"MPALG-1,MPCAS-2",,,,0
+2023-10-17,13:15,2023-10-17,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-17,15:15,2023-10-17,17:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Exercise,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-18,13:15,2023-10-18,15:00,,"DIT093GU,TIN093","Algorithms,Algorithms","EB,EC","ED-blocket,ED-blocket",Exercise,,,,"MPALG-1,MPCAS-2",,,,"0,0"
+2023-10-18,15:15,2023-10-18,17:00,,"DIT093GU,TIN093","Algorithms,Algorithms",EC,ED-blocket,Exercise,,,,"MPALG-1,MPCAS-2",,,,0
+2023-10-19,13:15,2023-10-19,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB3,Hörsalslängan,Lecture,,,,"MPALG-1,MPCSN-2",,,,0
+2023-10-20,13:15,2023-10-20,15:00,,"DAT060,DIT203GU","Logic in computer science,Logic in computer science",HB2,Hörsalslängan,Exercise,,,,"MPALG-1,MPCSN-2",,,,0

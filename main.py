@@ -10,8 +10,6 @@ from message_types.current_time import current_time
 
 PUSH_TO_GIT = False
 
-        
-
 def send_message(bot_number, message, recipient, group_id):
     if group_id: # Checks if it should send message to group or individual
         subprocess.run(['signal-cli', '-a', bot_number, 'send', '-m', message, '-g', group_id], capture_output=True)
@@ -51,6 +49,9 @@ def receive_message(bot_number, weather_api_key):
 
             elif message_frame.message[0:6] == "!quote": 
                 message = quote(message_frame, PUSH_TO_GIT)
+
+            elif message_frame.message[0:9] == "!schedule":
+                print("qe")
             
             if message: # Checks if the message is empty
                 send_message(bot_number, message, message_frame.sender_number, message_frame.group_id)
