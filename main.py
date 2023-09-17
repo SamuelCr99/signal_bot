@@ -14,14 +14,14 @@ PUSH_TO_GIT = False
 
 def send_message(bot_number, message, recipient, group_id):
     if group_id: # Checks if it should send message to group or individual
-        subprocess.run(['/home/sam/signal-cli-0.11.11/bin/signal-cli', '-a', bot_number, 'send', '-m', message, '-g', group_id], capture_output=True)
+        subprocess.run(['signal-cli', '-a', bot_number, 'send', '-m', message, '-g', group_id], capture_output=True)
 
     else:
-        subprocess.run(['/home/sam/signal-cli-0.11.11/bin/signal-cli', '-a', bot_number, 'send', '-m', message, recipient], capture_output=True)
+        subprocess.run(['signal-cli', '-a', bot_number, 'send', '-m', message, recipient], capture_output=True)
 
 
 def receive_message(bot_number, weather_api_key):
-    replies = subprocess.run(['/home/sam/signal-cli-0.11.11/bin/signal-cli', '-u', bot_number, 'receive', '--ignore-attachments', "-t 1"], capture_output=True).stdout.decode()
+    replies = subprocess.run(['signal-cli', '-u', bot_number, 'receive', '--ignore-attachments', "-t 1"], capture_output=True).stdout.decode()
     lines = replies.split('\n')
     current_message_frame_lines = []
     message_frames = []
@@ -32,6 +32,7 @@ def receive_message(bot_number, weather_api_key):
             message_frames.append(create_message_frame(current_message_frame_lines))
             current_message_frame_lines = []
         current_message_frame_lines.append(line)
+
 
     # Loop through each message and check if it is a command
     for message_frame in message_frames: 
