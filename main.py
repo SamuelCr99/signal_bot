@@ -1,14 +1,14 @@
 import subprocess
 import json
-import datetime 
-import requests
 from message_frame import create_message_frame
 from message_types.current_weather import current_weather
 from message_types.quote import quote
 from message_types.todays_weather import todays_weather
 from message_types.current_time import current_time
+from message_types.get_schedule import get_schedule
+from message_types.get_random_quote import get_random_quote
 
-PUSH_TO_GIT = False
+PUSH_TO_GIT = True
 
 def send_message(bot_number, message, recipient, group_id):
     if group_id: # Checks if it should send message to group or individual
@@ -51,7 +51,10 @@ def receive_message(bot_number, weather_api_key):
                 message = quote(message_frame, PUSH_TO_GIT)
 
             elif message_frame.message[0:9] == "!schedule":
-                print("qe")
+                message = get_schedule()
+
+            elif message_frame.message[0:12] == "!randomquote":
+                message = get_random_quote()
             
             if message: # Checks if the message is empty
                 send_message(bot_number, message, message_frame.sender_number, message_frame.group_id)
